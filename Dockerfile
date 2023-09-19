@@ -8,7 +8,7 @@ ENV NVIDIA_VISIBLE_DEVICES=all
 ENV LD_LIBRARY_PATH=/usr/local/nvidia/lib:/usr/local/nvidia/lib64
 ENV PYTORCH_VERSION=v1.10.0
 # ssh
-RUN apt-get install openssh-server -y
+RUN apt-get -y install openssh-server
 COPY ./sshd_config /etc/ssh/sshd_config
 RUN chmod 644 /etc/ssh/sshd_config
 RUN echo "jjchen7434\njjchen7434" | passwd
